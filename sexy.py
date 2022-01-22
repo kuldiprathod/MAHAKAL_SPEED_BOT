@@ -325,11 +325,11 @@ async def _(e):
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 6:
             bc = Ustad[0]
-            text = "Joining..."
+            text = "💞💞."
             event = await e.reply(text, parse_mode=None, link_preview=None)
             try:
                 await e.client(functions.channels.JoinChannelRequest(channel=bc))
-                await event.edit("ℂℍ𝔸𝕃𝕆 𝔾𝔸ℕ𝔻 𝕄𝔸ℝℕ𝔼 𝕁𝕆𝕀ℕ ℍ𝕆 𝔾𝔸𝕐𝔸")
+                await event.edit("🤤Joined🤤")
             except Exception as e:
                 await event.edit(str(e))
         else:
@@ -352,7 +352,7 @@ async def _(e):
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
             bc = Ustad[0]
-            text = "Joining...."
+            text = "💞💞"
             event = await e.reply(text, parse_mode=None, link_preview=None)
             try:
                 await e.client(ImportChatInviteRequest(bc))
