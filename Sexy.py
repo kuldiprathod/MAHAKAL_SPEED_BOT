@@ -66,7 +66,7 @@ for x in SUDO:
     SMEX_USERS.append(x)
 
 
-async def start_Ustad():
+async def start_sexy():
     global idk
     global ydk
     global wdk
@@ -290,7 +290,7 @@ async def start_Ustad():
 
 
 loop = asyncio.get_event_loop()
-loop.run_until_complete(start_Ustad())
+loop.run_until_complete(start_sexy())
 
 
 async def gifspam(e, smex):
