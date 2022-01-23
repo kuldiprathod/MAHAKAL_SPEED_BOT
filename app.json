@@ -6,7 +6,7 @@
     "spambot",
     "telegram",
     "userbot"
-  ],
+ ],
     "env": {
       "STRING": {
         "description": "Telethon String Session",
@@ -171,58 +171,6 @@
       "SUDO": {
         "description": "𝚂𝚄𝙳𝙾 𝚄𝚂𝙴𝚁𝚂 𝙸𝙳",
         "value": "2141929650",
-        "required": true
-      }
-  },
-  "addons": [{
-    "plan": "heroku-postgresql",
-    "options": {
-      "version": "12"
-    }
-  }],
-  "buildpacks": [{
-    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
-  },{
-    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
-  },{
-    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
-  },{
-    "url": "heroku/python"
-  }]
-}
-      "STRING5": {
-        "description": "Bot String Session",
-        "value": "",
-        "required": false
-      },
-      "STRING6": {
-        "description": "Bot String Session",
-        "value": "",
-        "required": false
-      },
-      "STRING7": {
-        "description": "Bot String Session",
-        "value": "",
-        "required": false
-      },
-      "STRING8": {
-        "description": "Bot String Session",
-        "value": "",
-        "required": false
-      },
-      "STRING9": {
-        "description": "Bot String Session",
-        "value": "",
-        "required": false
-      },
-        "STRING10": {
-        "description": "Bot String Session",
-        "value": "",
-        "required": false
-      },
-        "SUDO": {
-        "description": "Sudo Users Id",
-        "value": "",
         "required": true
       }
   },
