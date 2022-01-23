@@ -1,37 +1,31 @@
-import asyncio
 import os
-import random
 import sys
+import random
 from datetime import datetime
-
-import telethon.utils
+from os import execl
 from telethon import TelegramClient, events
+from telethon.sessions import StringSession
+from telethon.tl.functions.account import UpdateProfileRequest
+
+
 from telethon.errors import (
     ChannelInvalidError,
     ChannelPrivateError,
     ChannelPublicGroupNaError,
 )
-from telethon.sessions import StringSession
-from telethon.tl import functions, types
-from telethon.tl.functions.channels import GetFullChannelRequest, LeaveChannelRequest
-from telethon.tl.functions.messages import GetFullChatRequest, ImportChatInviteRequest
+from telethon.tl import functions
+from telethon.tl.functions.channels import GetFullChannelRequest
+from telethon.tl.functions.messages import GetFullChatRequest
 
-from Config import (
-    API_HASH,
-    API_ID,
-    STRING,
-    STRING2,
-    STRING3,
-    STRING4,
-    STRING5,
-    STRING6,
-    STRING7,
-    STRING8,
-    STRING9,
-    STRING10,
-    SUDO,
-)
+
+from Config import STRING, SUDO, BIO_MESSAGE, ALIVE_NAME, API_ID, API_HASH, STRING2, STRING3, STRING4 ,STRING5, STRING6, STRING7, STRING8 ,STRING9, STRING10, STRING11, STRING12 , STRING13 , STRING14 , STRING15 ,STRING16 , STRING17 , STRING18 , STRING19 , STRING20 , STRING21 , STRING22 , STRING23 , STRING24 , STRING25 , STRING26 , STRING27 , STRING28 , STRING29 , STRING30
+import asyncio
+import telethon.utils
+from telethon.tl import functions
+from telethon.tl.functions.channels import LeaveChannelRequest
+from telethon.tl.functions.messages import ImportChatInviteRequest
 from Utils import RAID, RRAID
+
 
 a = API_ID
 b = API_HASH
@@ -45,6 +39,27 @@ seven = STRING7
 eight = STRING8
 ninth = STRING9
 tenth = STRING10
+eleve = STRING11
+twelv = STRING12
+thirt = STRING13
+forte = STRING14
+fifth = STRING15
+sieee = STRING16
+seeee = STRING17
+eieee = STRING18
+nieee = STRING19
+gandu = STRING20
+ekish = STRING21
+baish = STRING22
+teish = STRING23
+tfour = STRING24
+tfive = STRING25
+tsix = STRING26
+tseven = STRING27
+teight = STRING28
+tnine = STRING29
+thirty = STRING30
+
 
 
 idk = ""
@@ -57,16 +72,36 @@ bdk = ""
 cdk = ""
 edk = ""
 ddk = ""
+vkk = ""
+kkk = ""
+lkk = ""
+mkk = ""
+sid = ""
+shy = ""
+aan = ""
+ake = ""
+eel = ""
+khu = ""
+shi = ""
+yaa = ""
+dav = ""
+raj = ""
+put = ""
+eag = ""
+gle = ""
+wal = ""
+aaa = ""
+boy = ""
+
 
 
 que = {}
 
-SMEX_USERS = [2141929650]
-for x in SUDO:
+SMEX_USERS = []
+for x in SUDO: 
     SMEX_USERS.append(x)
-
-
-async def start_sexy():
+    
+async def start_aries():
     global idk
     global ydk
     global wdk
@@ -77,6 +112,27 @@ async def start_sexy():
     global cdk
     global ddk
     global edk
+    global vkk
+    global kkk
+    global lkk
+    global mkk
+    global sid
+    global shy
+    global aan
+    global ake
+    global eel
+    global khu
+    global shi
+    global yaa
+    global dav
+    global raj
+    global put
+    global eag
+    global gle
+    global wal
+    global aaa
+    global boy
+    
     if smex:
         session_name = str(smex)
         print("String 1 Found")
@@ -85,20 +141,25 @@ async def start_sexy():
             print("Booting Up The Client 1")
             await idk.start()
             botme = await idk.get_me()
+            await idk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await idk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await idk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await idk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await idk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
-            idk = "smex"
             print(e)
+            pass
     else:
         print("Session 1 not Found")
         session_name = "startup"
         idk = TelegramClient(session_name, a, b)
         try:
             await idk.start()
-        except Exception:
+        except Exception as e:
             pass
-
+   
     if smexx:
         session_name = str(smexx)
         print("String 2 Found")
@@ -106,18 +167,25 @@ async def start_sexy():
         try:
             print("Booting Up The Client 2")
             await ydk.start()
+            await ydk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ydk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ydk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ydk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ydk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await ydk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 2 not Found")
+        pass
         session_name = "startup"
         ydk = TelegramClient(session_name, a, b)
         try:
             await ydk.start()
-        except Exception:
+        except Exception as e:
             pass
 
     if smexxx:
@@ -126,19 +194,26 @@ async def start_sexy():
         wdk = TelegramClient(StringSession(session_name), a, b)
         try:
             print("Booting Up The Client 3")
-            await wdk.start()
+            await  wdk.start()
+            await wdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await wdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await wdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await wdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await wdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await wdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 3 not Found")
+        pass
         session_name = "startup"
         wdk = TelegramClient(session_name, a, b)
         try:
             await wdk.start()
-        except Exception:
+        except Exception as e:
             pass
 
     if smexxxx:
@@ -148,18 +223,25 @@ async def start_sexy():
         try:
             print("Booting Up The Client 4")
             await hdk.start()
+            await hdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await hdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await hdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await hdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await hdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await hdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 4 not Found")
+        pass
         session_name = "startup"
         hdk = TelegramClient(session_name, a, b)
         try:
             await hdk.start()
-        except Exception:
+        except Exception as e:
             pass
 
     if smexxxxx:
@@ -169,20 +251,27 @@ async def start_sexy():
         try:
             print("Booting Up The Client 5")
             await sdk.start()
+            await sdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await sdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await sdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await sdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await sdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await sdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 5 not Found")
+        pass
         session_name = "startup"
         sdk = TelegramClient(session_name, a, b)
         try:
             await sdk.start()
-        except Exception:
+        except Exception as e:
             pass
-
+                  
     if sixth:
         session_name = str(sixth)
         print("String 6 Found")
@@ -190,18 +279,25 @@ async def start_sexy():
         try:
             print("Booting Up The Client 6")
             await adk.start()
+            await adk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await adk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await adk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await adk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await adk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await adk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 6 not Found")
+        pass
         session_name = "startup"
         adk = TelegramClient(session_name, a, b)
         try:
             await adk.start()
-        except Exception:
+        except Exception as e:
             pass
 
     if seven:
@@ -211,20 +307,28 @@ async def start_sexy():
         try:
             print("Booting Up The Client 7")
             await bdk.start()
+            await bdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await bdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await bdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await bdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await bdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await bdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 7 not Found")
+        pass
         session_name = "startup"
         bdk = TelegramClient(session_name, a, b)
         try:
             await bdk.start()
-        except Exception:
-            pass
-
+        except Exception as e:
+            pass    
+        
+    
     if eight:
         session_name = str(eight)
         print("String 8 Found")
@@ -232,20 +336,27 @@ async def start_sexy():
         try:
             print("Booting Up The Client 8")
             await cdk.start()
+            await cdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await cdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await cdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await cdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await cdk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await cdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 8 not Found")
+        pass
         session_name = "startup"
         cdk = TelegramClient(session_name, a, b)
         try:
             await cdk.start()
-        except Exception:
-            pass
-
+        except Exception as e:
+            pass   
+        
     if ninth:
         session_name = str(ninth)
         print("String 9 Found")
@@ -253,20 +364,28 @@ async def start_sexy():
         try:
             print("Booting Up The Client 9")
             await ddk.start()
+            await ddk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ddk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ddk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ddk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ddk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await ddk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 9 not Found")
+        pass
         session_name = "startup"
         ddk = TelegramClient(session_name, a, b)
         try:
             await ddk.start()
-        except Exception:
-            pass
-
+        except Exception as e:
+            pass   
+    
+  
     if tenth:
         session_name = str(tenth)
         print("String 10 Found")
@@ -274,24 +393,585 @@ async def start_sexy():
         try:
             print("Booting Up The Client 10")
             await edk.start()
+            await edk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await edk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await edk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await edk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await edk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
             botme = await edk.get_me()
             botid = telethon.utils.get_peer_id(botme)
             SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
+            pass
     else:
         print("Session 10 not Found")
+        pass
         session_name = "startup"
         edk = TelegramClient(session_name, a, b)
         try:
             await edk.start()
-        except Exception:
+        except Exception as e:
+            pass 
+        
+    
+    if eleve:
+        session_name = str(eleve)
+        print("String 11 Found")
+        vkk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 11")
+            await vkk.start()
+            await vkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await vkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await vkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await vkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await vkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await vkk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 11 not Found")
+        pass
+        session_name = "startup"
+        vkk = TelegramClient(session_name, a, b)
+        try:
+            await vkk.start()
+        except Exception as e:
+            pass
+        
+    
+    if twelv:
+        session_name = str(twelv)
+        print("String 12 Found")
+        kkk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 12")
+            await kkk.start()
+            await kkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await kkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await kkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await kkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await kkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await kkk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 12 not Found")
+        pass
+        session_name = "startup"
+        kkk = TelegramClient(session_name, a, b)
+        try:
+            await kkk.start()
+        except Exception as e:
+            pass   
+    
+  
+    if thirt:
+        session_name = str(thirt)
+        print("String 13  Found")
+        lkk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 13")
+            await lkk.start()
+            await lkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await lkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await lkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await lkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await lkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await lkk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 13 not Found")
+        pass
+        session_name = "startup"
+        lkk = TelegramClient(session_name, a, b)
+        try:
+            await lkk.start()
+        except Exception as e:
+            pass 
+        
+    
+    if forte:
+        session_name = str(forte)
+        print("String 14 Found")
+        mkk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 14")
+            await mkk.start()
+            await mkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await mkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await mkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await mkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await mkk(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await mkk.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 14 not Found")
+        pass
+        session_name = "startup"
+        mkk = TelegramClient(session_name, a, b)
+        try:
+            await mkk.start()
+        except Exception as e:
+            pass
+        
+    
+    if fifth:
+        session_name = str(fifth)
+        print("String 15 Found")
+        sid = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 15")
+            await sid.start()
+            await sid(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await sid(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await sid(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await sid(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await sid(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await sid.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 15 not Found")
+        pass
+        session_name = "startup"
+        sid = TelegramClient(session_name, a, b)
+        try:
+            await sid.start()
+        except Exception as e:
             pass
 
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(start_sexy())
+    if sieee:
+        session_name = str(sieee)
+        print("String 16 Found")
+        shy = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 16")
+            await shy.start()
+            botme = await shy.get_me()
+            await shy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await shy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await shy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await shy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await shy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 16 not Found")
+        session_name = "startup"
+        shy = TelegramClient(session_name, a, b)
+        try:
+            await shy.start()
+        except Exception as e:
+            pass
+   
+    if seeee:
+        session_name = str(seeee)
+        print("String 17 Found")
+        aan = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 17")
+            await aan.start()
+            botme = await aan.get_me()
+            await aan(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await aan(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await aan(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await aan(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await aan(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 17 not Found")
+        session_name = "startup"
+        aan = TelegramClient(session_name, a, b)
+        try:
+            await aan.start()
+        except Exception as e:
+            pass
+   
+    if eieee:
+        session_name = str(eieee)
+        print("String 18 Found")
+        ake = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 18")
+            await ake.start()
+            botme = await ake.get_me()
+            await ake(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ake(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ake(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ake(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await ake(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 18 not Found")
+        session_name = "startup"
+        ake = TelegramClient(session_name, a, b)
+        try:
+            await ake.start()
+        except Exception as e:
+            pass
+   
+    if nieee:
+        session_name = str(nieee)
+        print("String 19 Found")
+        eel = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 19")
+            await eel.start()
+            botme = await eel.get_me()
+            await eel(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await eel(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await eel(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await eel(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await eel(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 19 not Found")
+        session_name = "startup"
+        eel = TelegramClient(session_name, a, b)
+        try:
+            await idk.start()
+        except Exception as e:
+            pass
+   
+    if gandu:
+        session_name = str(gandu)
+        print("String 20 Found")
+        khu = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 20")
+            await khu.start()
+            botme = await khu.get_me()
+            await khu(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await khu(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await khu(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await khu(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await khu(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 20 not Found")
+        session_name = "startup"
+        khu = TelegramClient(session_name, a, b)
+        try:
+            await khu.start()
+        except Exception as e:
+            pass
+   
+    if ekish:
+        session_name = str(ekish)
+        print("String 21 Found")
+        shi = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 21")
+            await shi.start()
+            botme = await shi.get_me()
+            await shi(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await shi(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await shi(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await shi(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await shi(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 21 not Found")
+        session_name = "startup"
+        shi = TelegramClient(session_name, a, b)
+        try:
+            await shi.start()
+        except Exception as e:
+            pass
+   
+    if baish:
+        session_name = str(baish)
+        print("String 22 Found")
+        yaa = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 22")
+            await yaa.start()
+            botme = await yaa.get_me()
+            await yaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await yaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await yaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await yaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await yaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 22 not Found")
+        session_name = "startup"
+        yaa = TelegramClient(session_name, a, b)
+        try:
+            await yaa.start()
+        except Exception as e:
+            pass
+   
+    if teish:
+        session_name = str(teish)
+        print("String 23 Found")
+        dav = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 23")
+            await dav.start()
+            botme = await dav.get_me()
+            await dav(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await dav(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await dav(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await dav(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await dav(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 23 not Found")
+        session_name = "startup"
+        dav = TelegramClient(session_name, a, b)
+        try:
+            await dav.start()
+        except Exception as e:
+            pass
+   
+    if tfour:
+        session_name = str(tfour)
+        print("String 24 Found")
+        raj = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 24")
+            await raj.start()
+            botme = await raj.get_me()
+            await raj(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await raj(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await raj(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await raj(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await raj(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 24 not Found")
+        session_name = "startup"
+        raj = TelegramClient(session_name, a, b)
+        try:
+            await raj.start()
+        except Exception as e:
+            pass
+   
+    if tfive:
+        session_name = str(tfive)
+        print("String 25 Found")
+        put = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 25")
+            await put.start()
+            botme = await put.get_me()
+            await put(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await put(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await put(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await put(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await put(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 25 not Found")
+        session_name = "startup"
+        put = TelegramClient(session_name, a, b)
+        try:
+            await put.start()
+        except Exception as e:
+            pass
+   
+    if tsix:
+        session_name = str(tsix)
+        print("String 26 Found")
+        eag = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 26")
+            await eag.start()
+            botme = await eag.get_me()
+            await eag(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await eag(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await eag(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await eag(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await eag(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 26 not Found")
+        session_name = "startup"
+        eag = TelegramClient(session_name, a, b)
+        try:
+            await eag.start()
+        except Exception as e:
+            pass
+   
+    if tseven:
+        session_name = str(tseven)
+        print("String 27 Found")
+        ydk = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 27")
+            await gle.start()
+            await gle(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await gle(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await gle(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await gle(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await gle(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await gle.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 27 not Found")
+        pass
+        session_name = "startup"
+        gle = TelegramClient(session_name, a, b)
+        try:
+            await gle.start()
+        except Exception as e:
+            pass
 
+    if teight:
+        session_name = str(teight)
+        print("String 28 Found")
+        wal = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 28")
+            await wal.start()
+            await wal(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await wal(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await wal(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await wal(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await wal(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await wal.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 28 not Found")
+        pass
+        session_name = "startup"
+        wal = TelegramClient(session_name, a, b)
+        try:
+            await wal.start()
+        except Exception as e:
+            pass
+
+    if tnine:
+        session_name = str(tnine)
+        print("String 29 Found")
+        aaa = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 29")
+            await aaa.start()
+            await aaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await aaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await aaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await aaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await aaa(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await aaa.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 29 not Found")
+        pass
+        session_name = "startup"
+        aaa = TelegramClient(session_name, a, b)
+        try:
+            await aaa.start()
+        except Exception as e:
+            pass
+
+    if thirty:
+        session_name = str(thirty)
+        print("String 30 Found")
+        boy = TelegramClient(StringSession(session_name), a, b)
+        try:
+            print("Booting Up The Client 30")
+            await boy.start()
+            await boy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await boy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await boy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await boy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            await boy(functions.channels.JoinChannelRequest(channel="@team_blackstorm"))
+            botme = await boy.get_me()
+            botid = telethon.utils.get_peer_id(botme)
+            SMEX_USERS.append(botid)
+        except Exception as e:
+            print(e)
+            pass
+    else:
+        print("Session 30 not Found")
+        pass
+        session_name = "startup"
+        boy = TelegramClient(session_name, a, b)
+        try:
+            await boy.start()
+        except Exception as e:
+            pass
+                  
+   
+loop = asyncio.get_event_loop()
+loop.run_until_complete(start_aries())       
 
 async def gifspam(e, smex):
     try:
@@ -305,250 +985,11 @@ async def gifspam(e, smex):
                 unsave=True,
             )
         )
-    except Exception:
+    except Exception as e:
         pass
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-async def _(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.join <Public Channel or Group Link/Username>"
-    if e.sender_id in SMEX_USERS:
-        Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(e.text) > 6:
-            bc = Ustad[0]
-            text = "💞💞."
-            event = await e.reply(text, parse_mode=None, link_preview=None)
-            try:
-                await e.client(functions.channels.JoinChannelRequest(channel=bc))
-                await event.edit("🤤Joined🤤")
-            except Exception as e:
-                await event.edit(str(e))
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None)
-
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-async def _(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.pjoin <Private Channel or Group's access hash>\n\nExample :\nLink = https://t.me/joinchat/HGYs1wvsPUplMmM1\n\n.pjoin HGYs1wvsPUplMmM1"
-    if e.sender_id in SMEX_USERS:
-        Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(e.text) > 7:
-            bc = Ustad[0]
-            text = "💞💞"
-            event = await e.reply(text, parse_mode=None, link_preview=None)
-            try:
-                await e.client(ImportChatInviteRequest(bc))
-                await event.edit("🤤Joined🤤")
-            except Exception as e:
-                await event.edit(str(e))
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None)
-
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))        
-async def _(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗟𝗲𝗮𝘃𝗲\n\nCommand:\n\n.leave <Channel or Chat ID>"
-    if e.sender_id in SMEX_USERS:
-        jatt = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(e.text) > 7:
-            bc = jatt[0]
-            bc = int(bc)
-            text = "Leaving....."
-            event = await e.reply(text, parse_mode=None, link_preview=None )
-            try:
-                await event.client(LeaveChannelRequest(bc))
-                await event.edit("Successfully Left😴")
-            except Exception as e:
-                await event.edit(str(e))   
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None )
-
-#--------------------------
- 
-from telethon.tl.functions.channels import LeaveChannelRequest as leave
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
-async def f(event):
-    if event.sender_id in SMEX_USERS:
-       async for x in idk.iter_dialogs():
-         if x.is_group:
-           await idk(leave(x.id))           
-
-#------------------------
-
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
-async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗦𝗽𝗮𝗺\n\nCommand:\n\n.spam <count> <message to spam>\n\n.spam <count> <reply to a message>\n\nCount must be a integer."
-    error = "Spam Module can only be used till 100 count. For bigger spams use BigSpam."
-    if e.sender_id in SMEX_USERS:
-        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
-            return await e.reply(usage, parse_mode=None, link_preview=None)
-        Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        smex = await e.get_reply_message()
-        if len(Ustad) == 2:
-            message = str(Ustad[1])
-            counter = int(Ustad[0])
-            if counter > 100:
-                return await e.reply(error, parse_mode=None, link_preview=None)
-            await asyncio.wait([e.respond(message) for i in range(counter)])
-        elif e.reply_to_msg_id and smex.media:
-            counter = int(Ustad[0])
-            if counter > 100:
-                return await e.reply(error, parse_mode=None, link_preview=None)
-            for _ in range(counter):
-                smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
-                await gifspam(e, smex)
-        elif e.reply_to_msg_id and smex.text:
-            message = smex.text
-            counter = int(Ustad[0])
-            if counter > 100:
-                return await e.reply(error, parse_mode=None, link_preview=None)
-            await asyncio.wait([e.respond(message) for i in range(counter)])
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None)
-
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
-async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗹𝗮𝘆𝗦𝗽𝗮𝗺\n\nCommand:\n\n.delayspam <sleep time> <count> <message to spam>\n\n.delayspam <sleep time> <count> <reply to a message>\n\nCount and Sleeptime must be a integer."
-    if e.sender_id in SMEX_USERS:
-        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
-            return await e.reply(usage, parse_mode=None, link_preview=None)
-        smex = await e.get_reply_message()
-        Ustad = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-        Ustadsexy = Ustad[1:]
-        if len(Ustadsexy) == 2:
-            message = str(Ustadsexy[1])
-            counter = int(Ustadsexy[0])
-            sleeptime = float(Ustad[0])
-            for _ in range(counter):
-                async with e.client.action(e.chat_id, "typing"):
-                    if e.reply_to_msg_id:
-                        await smex.reply(message)
-                    else:
-                        await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(sleeptime)
-        elif e.reply_to_msg_id and smex.media:
-            counter = int(Ustadsexy[0])
-            sleeptime = float(Ustad[0])
-            for _ in range(counter):
-                async with e.client.action(e.chat_id, "document"):
-                    smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
-                    await gifspam(e, smex)
-                await asyncio.sleep(sleeptime)
-        elif e.reply_to_msg_id and smex.text:
-            message = smex.text
-            counter = int(Ustadsexy[0])
-            sleeptime = float(Ustad[0])
-            for _ in range(counter):
-                async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(sleeptime)
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None)
-
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.bigspam <count> <message to spam>\n\n.bigspam <count> <reply to a message>\n\nCount must be a integer."
-    if e.sender_id in SMEX_USERS:
-        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
-            return await e.reply(usage, parse_mode=None, link_preview=None)
-        Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        smex = await e.get_reply_message()
-        if len(Ustad) == 2:
-            message = str(Ustad[1])
-            counter = int(Ustad[0])
-            for _ in range(counter):
-                async with e.client.action(e.chat_id, "typing"):
-                    if e.reply_to_msg_id:
-                        await smex.reply(message)
-                    else:
-                        await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(0.1)
-        elif e.reply_to_msg_id and smex.media:
-            counter = int(Ustad[0])
-            for _ in range(counter):
-                async with e.client.action(e.chat_id, "document"):
-                    smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
-                    await gifspam(e, smex)
-                await asyncio.sleep(0.1)
-        elif e.reply_to_msg_id and smex.text:
-            message = smex.text
-            counter = int(Ustad[0])
-            for _ in range(counter):
-                async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(0.1)
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None)
-
-
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @hdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
@@ -558,6 +999,26 @@ async def spam(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱\n\nCommand:\n\n.raid <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SMEX_USERS:
@@ -594,118 +1055,218 @@ async def spam(e):
                     await asyncio.sleep(0.1)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
+          
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.join"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.join"))
 
 
-@idk.on(events.NewMessage(incoming=True))
-@ydk.on(events.NewMessage(incoming=True))
-@wdk.on(events.NewMessage(incoming=True))
-@hdk.on(events.NewMessage(incoming=True))
-@sdk.on(events.NewMessage(incoming=True))
-@adk.on(events.NewMessage(incoming=True))
-@bdk.on(events.NewMessage(incoming=True))
-@cdk.on(events.NewMessage(incoming=True))
-@edk.on(events.NewMessage(incoming=True))
-@ddk.on(events.NewMessage(incoming=True))
-async def _(event):
-    global que
-    queue = que.get(event.sender_id)
-    if not queue:
-        return
-    async with event.client.action(event.chat_id, "typing"):
-        await asyncio.sleep(0.3)
-    async with event.client.action(event.chat_id, "typing"):
-        await event.client.send_message(
-            entity=event.chat_id,
-            message="""{}""".format(random.choice(RRAID)),
-            reply_to=event.message.id,
-        )
-
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 async def _(e):
-    global que
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.replyraid <Username of User>\n\n.replyraid <reply to a User>"
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.join <Public Channel or Group Link/Username>"
+    if e.sender_id in SMEX_USERS:
+        aries = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        if len(e.text) > 6:
+            bc = aries[0]
+            text = "Joining..."
+            event = await e.reply(text, parse_mode=None, link_preview=None )
+            try:
+                await e.client(functions.channels.JoinChannelRequest(channel=bc))
+                await event.edit("Joined..♈️")
+            except Exception as e:
+                await event.edit(str(e))   
+        else:
+            await e.reply(usage, parse_mode=None, link_preview=None )
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.pjoin")) 
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
+
+
+
+async def _(e):
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.pjoin <Private Channel or Group's access hash>\n\nExample :\nLink = https://t.me/joinchat/HGYs1wvsPUplMmM1\n\n.pjoin HGYs1wvsPUplMmM1"
+    if e.sender_id in SMEX_USERS:
+        aries = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        if len(e.text) > 7:
+            bc = aries[0]
+            text = "Joining...."
+            event = await e.reply(text, parse_mode=None, link_preview=None )
+            try:
+                await e.client(ImportChatInviteRequest(bc))
+                await event.edit("Joined..♈️")
+            except Exception as e:
+                await event.edit(str(e))   
+        else:
+            await e.reply(usage, parse_mode=None, link_preview=None )
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
+
+
+async def _(e):
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗟𝗲𝗮𝘃𝗲\n\nCommand:\n\n.leave <Channel or Chat ID>"
+    if e.sender_id in SMEX_USERS:
+        aries = ("".leave(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        if len(e.text) > 7:
+            bc = aries[0]
+            bc = int(bc)
+            text = "Leaving..🤧"
+            event = await e.reply(text, parse_mode=None, link_preview=None )
+            try:
+                await event.client(LeaveChannelRequest(bc))
+                await event.edit("Left")
+            except Exception as e:
+                await event.edit(str(e))   
+        else:
+            await e.reply(usage, parse_mode=None, link_preview=None )
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+
+
+async def spam(e):
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.bigspam <count> <message to spam>\n\n.bigspam <count> <reply to a message>\n\nCount must be a integer."
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
-            return await e.reply(usage, parse_mode=None, link_preview=None)
-        Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        await e.get_reply_message()
-        if len(e.text) > 11:
-            message = str(Ustad[0])
-            a = await e.client.get_entity(message)
-            g = a.id
-            que[g] = []
-            qeue = que.get(g)
-            appendable = [g]
-            qeue.append(appendable)
-            text = "Activated Reply Raid"
-            await e.reply(text, parse_mode=None, link_preview=None)
-        elif e.reply_to_msg_id:
-            a = await e.get_reply_message()
-            b = await e.client.get_entity(a.sender_id)
-            g = b.id
-            que[g] = []
-            qeue = que.get(g)
-            appendable = [g]
-            qeue.append(appendable)
-            text = "𝐀𝐁 𝐁𝐎𝐋 𝐁𝐒𝐃𝐊"
-            await e.reply(text, parse_mode=None, link_preview=None)
+            return await e.reply(usage, parse_mode=None, link_preview=None )
+        aries = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        smex = await e.get_reply_message()
+        if len(aries) == 2:
+            message = str(aries[1])
+            counter = int(aries[0])
+            for _ in range(counter):
+                async with e.client.action(e.chat_id, "typing"):
+                    if e.reply_to_msg_id:
+                        await smex.reply(message)
+                    else:
+                        await e.client.send_message(e.chat_id, message)
+                    await asyncio.sleep(0.1)
+        elif e.reply_to_msg_id and smex.media:  
+            counter = int(aries[0])
+            for _ in range(counter):
+                async with e.client.action(e.chat_id, "document"):
+                    smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
+                    await gifspam(e, smex) 
+                await asyncio.sleep(0.1)  
+        elif e.reply_to_msg_id and smex.text:
+            message = smex.text
+            counter = int(aries[0])
+            for _ in range(counter):
+                async with e.client.action(e.chat_id, "typing"):
+                    await e.client.send_message(e.chat_id, message)
+                    await asyncio.sleep(0.1)
         else:
-            await e.reply(usage, parse_mode=None, link_preview=None)
-
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.dreplyraid"))
-async def _(e):
-    global que
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.dreplyraid <Username of User>\n\n.dreplyraid <reply to a User>"
-    if e.sender_id in SMEX_USERS:
-        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
-            return await e.reply(usage, parse_mode=None, link_preview=None)
-        Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        await e.get_reply_message()
-        if len(e.text) > 12:
-            message = str(Ustad[0])
-            a = await e.client.get_entity(message)
-            g = a.id
-            try:
-                queue = que.get(g)
-                queue.pop(0)
-            except Exception:
-                pass
-            text = "De-Activated Reply Raid"
-            await e.reply(text, parse_mode=None, link_preview=None)
-        elif e.reply_to_msg_id:
-            a = await e.get_reply_message()
-            b = await e.client.get_entity(a.sender_id)
-            g = b.id
-            try:
-                queue = que.get(g)
-                queue.pop(0)
-            except Exception:
-                pass
-            text = "De-Activated Reply Raid"
-            await e.reply(text, parse_mode=None, link_preview=None)
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None)
-
+            await e.reply(usage, parse_mode=None, link_preview=None )
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
@@ -717,15 +1278,35 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
+
 async def ping(e):
     if e.sender_id in SMEX_USERS:
         start = datetime.now()
-        text = "Pong!"
-        event = await e.reply(text, parse_mode=None, link_preview=None)
+        text = "☠️♈️"
+        event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
-        ms = (end - start).microseconds / 1000
+        ms = (end-start).microseconds / 1000
         await event.edit(f"☠️ 𝙁𝙐𝘾𝙆𝙄𝙉𝙂 𝙎𝙋𝙀𝙀𝘿 !\n`{ms}` 𝗺𝘀\n👅𝙎𝙀𝙓𝙔 𝙭 𝙎𝙋𝘼𝙈\n ")
-
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
@@ -737,49 +1318,149 @@ async def ping(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 async def restart(e):
     if e.sender_id in SMEX_USERS:
-        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\n𝑾𝒂𝒊𝒕 𝑭𝒐𝒓 2 𝒎𝒊𝒏𝒖𝒕𝒆𝒔"
-        await e.reply(text, parse_mode=None, link_preview=None)
+        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙...\n\nPing after 60 seconds"
+        await e.reply(text, parse_mode=None, link_preview=None )
         try:
             await idk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await ydk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await wdk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await hdk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await sdk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await adk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await bdk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await cdk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await ddk.disconnect()
-        except Exception:
+        except Exception as e:
             pass
         try:
             await edk.disconnect()
-        except Exception:
+        except Exception as e:
+            pass
+        try:
+            await vkk.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await kkk.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await lkk.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await mkk.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await sid.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await shy.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await aan.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await ake.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await eel.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await khu.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await shi.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await yaa.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await dav.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await raj.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await put.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await eag.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await gle.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await wal.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await aaa.disconnect()
+        except Exception as e:
+            pass
+        try:
+            await boy.disconnect()
+        except Exception as e:
             pass
         os.execl(sys.executable, sys.executable, *sys.argv)
         quit()
@@ -795,317 +1476,282 @@ async def restart(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.help"))
+
 async def help(e):
     if e.sender_id in SMEX_USERS:
-        text = "👅𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀👅\n►Pɪɴɢ\n►Rᴇsᴛᴀʀᴛ\n►Jᴏɪɴ\n►Lᴇᴀᴠᴇ\n►Pᴊᴏɪɴ\n►Bɪɢsᴘᴀᴍ\n►Rᴀɪᴅ\n\n\n\n 𝙁𝙊𝙍 𝘼𝙉𝙔 𝙃𝙀𝙇𝙋 𝙅𝙊𝙄𝙉 @Sexy_Army "
-        await e.reply(text, parse_mode=None, link_preview=None)
+       text = "𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 ☠️☠️\n►Pɪɴɢ\n►Rᴇsᴛᴀʀᴛ\n►Jᴏɪɴ\n►Lᴇᴀᴠᴇ\n►Pᴊᴏɪɴ\n►Bɪɢsᴘᴀᴍ\n►Rᴀɪᴅ\n\n\n\n       "
+       await e.reply(text, parse_mode=None, link_preview=None )
 
+        
 
-# --------------------------------------------------------------------------------------------------------------------------------
-
-
-
-# --------------------------------------------------------------------------------------------------------------------------------
-
-
-from telethon.errors import (
-    ChannelInvalidError,
-    ChannelPrivateError,
-    ChannelPublicGroupNaError,
-)
-from telethon.tl import functions
-from telethon.tl.functions.channels import GetFullChannelRequest
-from telethon.tl.functions.messages import GetFullChatRequest
-
-async def get_chatinfo(event):
-    chat = chat = event.text[10:]
-    chat_info = None
-    if chat:
-        try:
-            chat = int(chat)
-        except ValueError:
-            pass
-    if not chat:
-        if event.reply_to_msg_id:
-            replied_msg = await event.get_reply_message()
-            if replied_msg.fwd_from and replied_msg.fwd_from.channel_id is not None:
-                chat = replied_msg.fwd_from.channel_id
-        else:
-            chat = event.chat_id
-    try:
-        chat_info = await event.client(GetFullChatRequest(chat))
-    except:
-        try:
-            chat_info = await event.client(GetFullChannelRequest(chat))
-        except ChannelInvalidError:
-            await event.reply("Invalid channel/group")
-            return None
-        except ChannelPrivateError:
-            await event.reply(
-                "This is a private channel/group or I am banned from there"
-            )
-            return None
-        except ChannelPublicGroupNaError:
-            await event.reply("Channel or supergroup doesn't exist")
-            return None
-        except (TypeError, ValueError):
-            await event.reply("Invalid channel/group")
-            return None
-    return chat_info
-
-
-def user_full_name(user):
-    names = [user.first_name, user.last_name]
-    names = [i for i in list(names) if i]
-    full_name = " ".join(names)
-    return full_name
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-async def get_users(event):
-    sender = await event.get_sender()
-    me = await event.client.get_me()
-    if not sender.id == me.id:
-        shivam = await event.reply("processing...")
-    else:
-        shivam = await event.reply("processing...")
-    alcoholic = await get_chatinfo(event)
-    chat = await event.get_chat()
-    if event.is_private:
-        return await shivam.edit("Sorry, Cant add users here")
-    s = 0
-    f = 0
-    error = "None"
-
-    await shivam.edit("TerminalStatus\n\nCollecting Users.......")
-    async for user in event.client.iter_participants(alcoholic.full_chat.id):
-        try:
-            if error.startswith("Too"):
-                return await shivam.edit(
-                    f"Terminal Finished With Error\n(May Got Limit Error from telethon Please try agin Later)\nError : \n{error}\n\n• Invited {s} people \n• Failed to Invite {f} people"
-                )
-            await event.client(
-                functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
-            )
-            s = s + 1
-            await shivam.edit(
-                f"Terminal Running...\n\n• Invited {s} people \n• Failed to Invite {f} people\n\n× LastError: {error}"
-            )
-        except Exception as e:
-            error = str(e)
-            f = f + 1
-    return await shivam.edit(
-        f"Terminal Finished \n\n• Successfully Invited {s} people \n• failed to invite {f} people #Sexy_Army_OP"
-    )
-#################
     
-from telethon.errors import (
-    ChannelInvalidError,
-    ChannelPrivateError,
-    ChannelPublicGroupNaError,
-)
-from telethon.tl import functions
-from telethon.tl.functions.channels import GetFullChannelRequest
-from telethon.tl.functions.messages import GetFullChatRequest
-
-async def get_chatinfo(event):
-    chat = event.pattern_match.group(1)
-    chat_info = None
-    if chat:
-        try:
-            chat = int(chat)
-        except ValueError:
-            pass
-    if not chat:
-        if event.reply_to_msg_id:
-            replied_msg = await event.get_reply_message()
-            if replied_msg.fwd_from and replied_msg.fwd_from.channel_id is not None:
-                chat = replied_msg.fwd_from.channel_id
-        else:
-            chat = event.chat_id
-    try:
-        chat_info = await event.client(GetFullChatRequest(chat))
-    except:
-        try:
-            chat_info = await event.client(GetFullChannelRequest(chat))
-        except ChannelInvalidError:
-            await event.reply("`Invalid channel/group`")
-            return None
-        except ChannelPrivateError:
-            await event.reply(
-                "`This is a private channel/group or I am banned from there`"
-            )
-            return None
-        except ChannelPublicGroupNaError:
-            await event.reply("`Channel or supergroup doesn't exist`")
-            return None
-        except (TypeError, ValueError):
-            await event.reply("`Invalid channel/group`")
-            return None
-    return chat_info
-
-
-def user_full_name(user):
-    names = [user.first_name, user.last_name]
-    names = [i for i in list(names) if i]
-    full_name = " ".join(names)
-    return full_name
-
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-async def get_users(event):
-    sender = await event.get_sender()
-    me = await event.client.get_me()
-    if not sender.id == me.id:
-        hell = await eor(event, "`processing...`")
-    else:
-        hell = await eor(event, "`processing...`")
-    he_ll = event.pattern_match.group(1)
-    if he_ll == "@SweetBuddiesClub":
-        return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@SweetBuddiesClub":
-        return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@SweetBuddiesClub":
-        return await hell.edit("Restricted to invite users from there.")
-    kraken = await get_chatinfo(event)
-    chat = await event.get_chat()
-    if event.is_private:
-        return await hell.edit("`Sorry, Cant add users here`")
-    s = 0
-    f = 0
-    error = "None"
-
-    await hell.edit("**Inviting Users....")
-    async for user in event.client.iter_participants(kraken.full_chat.id):
-        try:
-            if error.startswith("Too"):
-                return await hell.edit(
-                    f"**INVITING FINISHED !**\n\n**Error :** \n`{error}`\n\n**Invited :**  `{s}` users. \n**Failed to Invite :** `{f}` users."
-                )
-            await event.client(
-                functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
-            )
-            s = s + 1
-            await hell.edit(
-                f"**INVITING USERS.. **\n\n**Invited :**  `{s}` users \n**Failed to Invite :**  `{f}` users.\n\n**×Error :**  `{error}`"
-            )
-        except Exception as e:
-            error = str(e)
-            f = f + 1
-    return await hell.edit(
-        f"**INVITING FINISHED** \n\n**Invited :**  `{s}` users \n**Failed :**  `{f}` users."
-    )
-
-
+        
 text = """
-░██████╗███████╗██╗░░██╗██╗░░░██╗
-██╔════╝██╔════╝╚██╗██╔╝╚██╗░██╔╝
-╚█████╗░█████╗░░░╚███╔╝░░╚████╔╝░
-░╚═══██╗██╔══╝░░░██╔██╗░░░╚██╔╝░░
-██████╔╝███████╗██╔╝╚██╗░░░██║░░░
-╚═════╝░╚══════╝╚═╝░░╚═╝░░░╚═╝░░░
-"""
+⚜️ 𝙂𝙤 𝘿𝙤 .𝙥𝙞𝙣𝙜 𝙖𝙩 @𝙏𝙚𝙖𝙢_𝘽𝙡𝙖𝙘𝙠𝙎𝙩𝙤𝙧𝙢 ⚜️
+💥𝗕𝗬 @BlackStorm_owner 💥"""
 
 print(text)
 print("")
-print(
-    "👅𝙎𝙀𝙓𝙔 𝙎𝙋𝘼𝙈 𝘽𝙊𝙏 𝙍𝙀𝘼𝘿𝙔 𝙏𝙊 𝙁𝙐𝘾𝙆\n𝙅𝙤𝙞𝙣 @𝙎𝙀𝙓𝙔_𝘼𝙍𝙈𝙔 𝙁𝙊𝙍 𝙐𝙋𝘿𝘼𝙏𝙀𝙎👅"
-)
+print("𝗦𝗣𝗔𝗠 𝗕𝗢𝗧 𝗥𝗘𝗔𝗗𝗬 𝗙𝗢𝗥 𝗨𝗦𝗘")
 if len(sys.argv) not in (1, 3, 4):
     try:
         idk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         ydk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         wdk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         hdk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         sdk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         adk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         bdk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         cdk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         edk.disconnect()
-    except Exception:
+    except Exception as e:
         pass
     try:
         ddk.disconnect()
-    except Exception:
+    except Exception as e:
+        pass
+    try:
+        vkk.disconnect()
+    except Exception as e:
+        pass 
+    try:
+        kkk.disconnect()
+    except Exception as e:
+        pass
+    try:
+        lkk.disconnect()
+    except Exception as e:
+        pass 
+    try:
+        mkk.disconnect()
+    except Exception as e:
+        pass
+    try:
+        sid.disconnect()
+    except Exception as e:
+        pass
+    try:
+        shy.disconnect()
+    except Exception as e:
+        pass
+    try:
+        aan.disconnect()
+    except Exception as e:
+        pass
+    try:
+        ake.disconnect()
+    except Exception as e:
+        pass
+    try:
+        eel.disconnect()
+    except Exception as e:
+        pass
+    try:
+        khu.disconnect()
+    except Exception as e:
+        pass
+    try:
+        shi.disconnect()
+    except Exception as e:
+        pass
+    try:
+        yaa.disconnect()
+    except Exception as e:
+        pass
+    try:
+        dav.disconnect()
+    except Exception as e:
+        pass
+    try:
+        raj.disconnect()
+    except Exception as e:
+        pass
+    try:
+        put.disconnect()
+    except Exception as e:
+        pass
+    try:
+        eag.disconnect()
+    except Exception as e:
+        pass
+    try:
+        gle.disconnect()
+    except Exception as e:
+        pass
+    try:
+        wal.disconnect()
+    except Exception as e:
+        pass
+    try:
+        aaa.disconnect()
+    except Exception as e:
+        pass
+    try:
+        boy.disconnect()
+    except Exception as e:
         pass
 else:
     try:
         idk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         ydk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         wdk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         hdk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         sdk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         adk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         bdk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         cdk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         edk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
         pass
     try:
         ddk.run_until_disconnected()
-    except Exception:
+    except Exception as e:
+        pass
+    try:
+        vkk.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        kkk.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        lkk.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        mkk.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        sid.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        shy.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        aan.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        ake.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        eel.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        khu.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        shi.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        yaa.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        dav.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        raj.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        put.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        eag.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        gle.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        wal.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        aaa.run_until_disconnected()
+    except Exception as e:
+        pass
+    try:
+        boy.run_until_disconnected()
+    except Exception as e:
         pass
